@@ -1,0 +1,24 @@
+Data Access Information:
+
+Dataset Sources:
+
+1. Sleep Health and Lifestyle Dataset:
+   - Source: Kaggle (https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)
+   - Attributes: Person ID, Gender, Age, Occupation, Sleep Duration, Quality of Sleep, Physical Activity Level, Stress Level, BMI Category, Blood Pressure, Heart Rate, Daily Steps, Sleep Disorder
+2. Heart Disease Dataset
+   - Source: Kaggle (https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset)
+   - Attributes: Age, gender, chest pain type, blood pressure, cholesterol, fasting blood sugar, ECG results, maximum heart rate, heart disease diagnosis.
+
+3. Gym Members Exercise Tracking Dataset
+   - Source: Kaggle (https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset)
+   - Attributes: Age, Gender, Workout frequency, calories burned, BMI, hydration levels, heart rate, daily steps.
+
+
+Access Instructions:
+The datasets are available in the Data/ folder.
+
+Load the dataset using Pandas:
+python
+sleep_df = pd.read_csv("Sleep_health_and_lifestyle_dataset.csv")
+heart_df = pd.read_csv("heart.csv")
+gym_df = pd.read_csv("gym_members_exercise_tracking.csv")For large-scale analysis, consider using a PostgreSQL or SQLite database.
