@@ -54,6 +54,9 @@ In Milestone 3, we focused on model evaluation, building an interactive tool, an
 
 ## Streamlit Dashboard: How to Run
 
+streamlit run app.py
+
+
 1. Install dependencies:
 ```bash
 pip install -r requirements.txt
@@ -67,3 +70,9 @@ git clone https://github.com/<your-username>/cap5771sp25-project.git
 pip install -r requirements.txt
 
 jupyter notebook notebooks/Milestone2.ipynb
+
+## Tool Demo Video Link
+https://drive.google.com/file/d/1tn0eXIPUiQinKrsTdSRiFATFZ-d9djcV/view?usp=drive_link
+
+## Power point presentation video Link
+https://drive.google.com/file/d/1F-BtdTlTqvgqDTj6_Jlm_nxk6kkV7Gqe/view?usp=drive_link
