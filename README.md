@@ -31,6 +31,33 @@ For this phase, we:
 
 ---
 
+---
+
+## Milestone 3: Evaluation, Tool Development, & Interpretation
+
+In Milestone 3, we focused on model evaluation, building an interactive tool, and drawing actionable insights.
+
+### Key Tasks:
+- Evaluated model performance on test data using:
+  - **Accuracy**, **Precision**, **Recall**, **F1 Score**.
+- Compared **full-feature model** vs **lifestyle-only model**:
+  - Full-feature Random Forest Accuracy: **99.9%**.
+  - Lifestyle-only Random Forest Accuracy: **97.9%**.
+- Identified top predictive features:
+  - **Cholesterol**, **Systolic BP**, **Stress Level**, **Heart Resilience Score**.
+- Developed a **Streamlit dashboard** to provide:
+  - Real-time risk prediction and probability.
+  - Visual comparison of user inputs vs ideal health values.
+  - Input summary table for review.
+
+---
+
+## Streamlit Dashboard: How to Run
+
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+
 ## How to Run
 
 1. Clone the repo:
