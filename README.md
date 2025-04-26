@@ -30,6 +30,9 @@ Note: Ensure that the model files rf_model.pkl and scaler.pkl are located in the
 ## Presentation Video
 [Watch the Presentation](https://drive.google.com/file/d/1F-BtdTlTqvgqDTj6_Jlm_nxk6kkV7Gqe/view?usp=drive_link)
 
+## PowerPoint Link
+(https://docs.google.com/presentation/d/1GxwM6DXTHV5YtKdJQn9jzp2sgObon8wX/edit?usp=drive_link&ouid=102252239096845929472&rtpof=true&sd=true)
+
 ## Project Milestones
 
 ### Milestone 1: Project Setup & EDA
