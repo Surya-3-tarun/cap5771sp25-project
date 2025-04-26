@@ -4,9 +4,16 @@ import numpy as np
 import joblib
 import matplotlib.pyplot as plt
 
+# Set page config - must be the first Streamlit command
+st.set_page_config(page_title="Heart Risk Predictor", layout="centered")
+
 # Load full-feature model and scaler
-model = joblib.load("model/rf_model.pkl")
-scaler = joblib.load("model/scaler.pkl")
+try:
+    model = joblib.load("model/rf_model.pkl")
+    scaler = joblib.load("model/scaler.pkl")
+except FileNotFoundError:
+    st.error("Model files not found. Please ensure 'rf_model.pkl' and 'scaler.pkl' are in the 'model' directory.")
+    st.stop()
 
 # Full feature list used for prediction
 features = [
@@ -17,7 +24,12 @@ features = [
     'Quality of Sleep', 'Workout_Frequency (days/week)', 'experience_level_encoded'
 ]
 
-st.set_page_config(page_title="Heart Risk Predictor", layout="centered")
+# Intro Text
+st.markdown("""
+This interactive tool helps you assess your potential heart disease risk based on your lifestyle and clinical health metrics.
+Enter your details below, and the model will predict your risk along with personalized feedback.
+""")
+
 st.title("❤️ Heart Disease Risk Predictor")
 
 def get_user_input():
@@ -59,8 +71,10 @@ def get_user_input():
 
     return data
 
+# Get user input
 input_data = get_user_input()
 
+# Predict button
 if st.button("Predict Heart Risk"):
     X_scaled = scaler.transform(input_data)
     prediction = model.predict(X_scaled)[0]
@@ -69,6 +83,11 @@ if st.button("Predict Heart Risk"):
     st.subheader("Prediction Result")
     st.success("Not at Risk" if prediction == 0 else "At Risk of Heart Disease")
     st.markdown(f"**Probability of Heart Risk:** `{proba * 100:.2f}%`")
+
+    st.markdown("""
+    *Note: This prediction is powered by a Random Forest model trained on clinical and lifestyle data.
+    For educational purposes only, not a medical diagnosis.*
+    """)
 
     st.markdown("### Your Input Summary")
     st.dataframe(input_data)
@@ -116,4 +135,6 @@ if st.button("Predict Heart Risk"):
     ax2.legend()
     st.pyplot(fig2)
 
-
+    compare_df["Gap"] = abs(compare_df["Ideal"] - compare_df["You"])
+    top_gap = compare_df.sort_values(by="Gap", ascending=False).iloc[0]
+    st.markdown(f"**Tip:** Your biggest deviation is in **{top_gap['Feature']}**.")
