@@ -1,5 +1,8 @@
 # cap5771sp25-project
 
+## Sri Surya Tarun Narala
+## UFID: 27268217
+
 # Heart Disease Risk Prediction – CAP5771 Project
 
 ## Overview
@@ -7,9 +10,6 @@
 This project predicts heart disease risk by analyzing both clinical and lifestyle factors—such as sleep, stress, physical activity, blood pressure, and cholesterol—using machine learning. The interactive Streamlit dashboard provides personalized, real-time insights to help users understand their heart health and make data-driven lifestyle improvements.
 
 ---
-
-## Sri Surya Tarun Narala
-## UFID: 27268217
 
 ## Quick Start – How to Run the Dashboard
 1. **Clone the repository**  
