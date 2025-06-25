@@ -1,7 +1,6 @@
 # cap5771sp25-project
 
 ## Sri Surya Tarun Narala
-## UFID: 27268217
 
 # Heart Disease Risk Prediction – CAP5771 Project
 
